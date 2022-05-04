@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginStart="10dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="App load time optimization"/>
+
+        <TextView
+            android:id="@+id/closedTimeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:background="@drawable/shape_rectangle_color_primary"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="closed 2 min ago"/>
+
+        <TextView
+            android:id="@+id/createdBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="@+id/userImageView"
+            app:layout_constraintBottom_toBottomOf="@+id/userImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/created_by"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userImageView"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintStart_toEndOf="@+id/createdBy"
+            tools:srcCompat="@mipmap/ic_launcher"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/closedTimeView"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"/>
+
+
+        <TextView
+            android:id="@+id/byUserView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginStart="5dp"
+            app:layout_constraintWidth="match_constraint"
+            app:layout_constraintTop_toTopOf="@+id/userImageView"
+            app:layout_constraintBottom_toBottomOf="@+id/userImageView"
+            app:layout_constraintStart_toEndOf="@+id/userImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="mv3rick on 30 apr"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

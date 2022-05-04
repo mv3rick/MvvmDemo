@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MvvmDemo</string>
+    <string name="pull_requests">Pull Requests</string>
+    <string name="closed">closed %1$s</string>
+    <string name="creator_detail">%1$s %2$s</string>
+    <string name="created_by">Created by</string>
+</resources>
