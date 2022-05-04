@@ -22,7 +22,7 @@ class MainViewModel() : ViewModel() {
     private val _response: MutableLiveData<NetworkResult<List<PullRequest>>> = MutableLiveData()
     val response: LiveData<NetworkResult<List<PullRequest>>> = _response
 
-    fun fetchGitPullRequests(owner : String = "square", repo : String = "retrofit", state : String = "closed",
+    fun fetchGitPullRequests(owner : String = "mv3rick", repo : String = "MvvmDemo", state : String = "closed",
                              sort : String = "closed_at", direction : String = "desc",
                              per_page: Int = 30, pageNumber: Int) {
         viewModelScope.launch(BusinessThreadExecutor.mBusinessPoolExecutor.asCoroutineDispatcher()) {
