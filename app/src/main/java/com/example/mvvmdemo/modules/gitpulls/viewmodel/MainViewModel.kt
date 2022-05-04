@@ -30,5 +30,6 @@ class MainViewModel() : ViewModel() {
             val result = GitHubRepo.fetchGitPullRequests(owner, repo, state, sort, direction, per_page, pageNumber)
             _response.postValue(result)
         }
+        //TODO add kotlin flow and hilt demo
     }
 }
