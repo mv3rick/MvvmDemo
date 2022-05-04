@@ -29,5 +29,20 @@
         app:indicatorColor="@color/white"
         app:trackColor="?attr/colorPrimary"
         app:indicatorDirectionCircular="clockwise"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/emptyListMessageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/empty_pr_message"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

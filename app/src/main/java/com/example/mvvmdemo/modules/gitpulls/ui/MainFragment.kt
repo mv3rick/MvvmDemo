@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -87,6 +89,11 @@ class MainFragment : Fragment() {
                         }
                     }
                     binding.loadingBar.visibility = View.GONE
+                    if(pullRequests.isEmpty()){
+                        binding.emptyListMessageView.visibility = VISIBLE
+                    } else {
+                        binding.emptyListMessageView.visibility = GONE
+                    }
                 }
             }
 
